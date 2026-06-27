@@ -1,0 +1,243 @@
+/* AeroDoc landing page — the app's identity rendered in HTML.
+   Dark, thin-bordered, no gradients/shadows. Tokens mirror
+   apps/aerodoc_flutter/lib/design/ad_tokens.dart (dark palette). */
+
+:root {
+  --bg-deep: #1A1C1F;
+  --bg-panel: #22252A;
+  --bg-raised: #2A2E34;
+  --hover: #33373E;
+  --fg: #E6E8EC;
+  --fg-2: #9CA1AB;
+  --fg-muted: #6A6F78;
+  --line-soft: #33373E;
+  --line-hard: #444851;
+  --accent: #C46A4A;
+  --accent-soft: #C46A4A29;
+  --caution: #E0A028;
+  --caution-wash: #E0A02821;
+
+  --sans: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --display: 'IBM Plex Sans', var(--sans);
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --maxw: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg-deep);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 48px 64px;
+}
+
+a { color: inherit; }
+.mono { font-family: var(--mono); font-size: 12px; letter-spacing: 0.2px; }
+.muted { color: var(--fg-muted); }
+
+.eyebrow {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0 16px;
+  border-bottom: 1px solid var(--line-hard);
+}
+.topnav { display: flex; gap: 22px; }
+.topnav a {
+  text-decoration: none;
+  color: var(--fg-2);
+  transition: color 0.15s ease;
+}
+.topnav a:hover { color: var(--fg); }
+
+/* ── Hero ───────────────────────────────────────────────── */
+.hero { padding: 72px 0 8px; }
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1.08;
+  letter-spacing: -0.4px;
+  margin: 0 0 18px;
+  color: var(--fg);
+}
+.hero .sub {
+  max-width: 620px;
+  margin: 0;
+  font-size: 16px;
+  color: var(--fg-2);
+}
+
+/* ── Download row ───────────────────────────────────────── */
+.downloads {
+  display: flex;
+  gap: 14px;
+  margin: 36px 0 0;
+}
+.dl {
+  flex: 1 1 0;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid var(--line-hard);
+  background: var(--bg-panel);
+  color: var(--fg);
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
+}
+.dl:hover { background: var(--hover); }
+.dl:active { transform: translateY(1px); }
+.dl-os { font-weight: 600; font-size: 14px; }
+.dl-meta { color: var(--fg-2); }
+
+/* Primary (accent) button — the OS we think you're on. */
+.dl.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1A1C1F;
+}
+.dl.primary .dl-meta { color: #2A1A12; }
+.dl.primary:hover { background: #B65F40; border-color: #B65F40; }
+.dl:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* OS detection: default + Windows -> Windows primary; Android -> Android
+   primary AND moved first. JS sets <html data-os>. */
+[data-os="android"] .downloads { flex-direction: row; }
+[data-os="android"] .dl-android { order: 0; }
+[data-os="android"] .dl-windows { order: 1; }
+[data-os="unknown"] .dl-windows,
+[data-os="windows"] .dl-windows { background: var(--accent); border-color: var(--accent); color: #1A1C1F; }
+[data-os="unknown"] .dl-windows .dl-meta,
+[data-os="windows"] .dl-windows .dl-meta { color: #2A1A12; }
+[data-os="unknown"] .dl-windows:hover,
+[data-os="windows"] .dl-windows:hover { background: #B65F40; border-color: #B65F40; }
+[data-os="android"] .dl-android { background: var(--accent); border-color: var(--accent); color: #1A1C1F; }
+[data-os="android"] .dl-android .dl-meta { color: #2A1A12; }
+[data-os="android"] .dl-android:hover { background: #B65F40; border-color: #B65F40; }
+
+/* ── Caution callout ────────────────────────────────────── */
+.callout {
+  margin: 24px 0 0;
+  padding: 14px 18px;
+  background: var(--caution-wash);
+  border-left: 2px solid var(--caution);
+  border-radius: 4px;
+}
+.callout p { margin: 0; font-size: 14px; color: var(--fg-2); }
+.callout strong { color: var(--fg); font-weight: 600; }
+.callout a { color: var(--fg); }
+
+/* ── Value cards ────────────────────────────────────────── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 48px 0 0;
+}
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  padding: 20px;
+}
+.card .dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background: var(--dot, var(--accent));
+  margin-bottom: 12px;
+}
+.card h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 6px;
+  color: var(--fg);
+}
+.card p { margin: 0; font-size: 14px; color: var(--fg-2); }
+
+/* ── System requirements ────────────────────────────────── */
+.sysreq { margin: 48px 0 0; }
+.label {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  margin: 0 0 12px;
+}
+.reqgrid {
+  background: var(--bg-raised);
+  border: 1px solid var(--line-soft);
+  border-radius: 4px;
+  padding: 16px 18px;
+  display: grid;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--fg-2);
+}
+.req-os { color: var(--fg); font-weight: 500; }
+
+/* ── Version strip ──────────────────────────────────────── */
+.verstrip {
+  margin: 40px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--fg-2);
+}
+.verstrip a { color: var(--fg-2); text-decoration: none; }
+.verstrip a:hover { color: var(--fg); }
+
+/* ── Footer ─────────────────────────────────────────────── */
+.foot {
+  margin: 64px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line-hard);
+}
+.foot p { margin: 8px 0 0; font-size: 13px; color: var(--fg-2); }
+.foot .muted a { color: var(--fg-muted); }
+.foot .muted a:hover { color: var(--fg-2); }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .wrap { padding: 0 16px 48px; }
+  .hero { padding: 48px 0 8px; }
+  .hero h1 { font-size: 30px; }
+  .downloads,
+  [data-os="android"] .downloads { flex-direction: column; }
+  .cards { grid-template-columns: 1fr; }
+  .verstrip { flex-direction: column; align-items: flex-start; gap: 6px; }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-os="unknown">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AeroDoc — Boeing 737 maintenance reference, offline</title>
+  <meta name="description" content="AeroDoc — AMM, AIPC, WDM and FIM for the Air Algérie B737-89 fleet. Read on Windows or Android with no connection." />
+  <meta property="og:title" content="AeroDoc" />
+  <meta property="og:description" content="Boeing 737 maintenance reference, offline on your device." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <!-- ── Header ─────────────────────────────────────────── -->
+    <header class="topbar">
+      <div class="wordmark">
+        <span class="eyebrow">AERODOC</span>
+      </div>
+      <nav class="topnav">
+        <a id="navVersion" class="mono" href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest">v—</a>
+        <a class="mono" href="https://github.com/engineerlogger-spec/aerodoc-downloads" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <!-- ── Hero ───────────────────────────────────────────── -->
+    <section class="hero">
+      <h1>Boeing&nbsp;737 maintenance reference,<br />offline on your device.</h1>
+      <p class="sub">AMM, AIPC, WDM and FIM for the Air&nbsp;Algérie B737-89 fleet.
+        Read on Windows or Android with no connection.</p>
+    </section>
+
+    <!-- ── Download row ───────────────────────────────────── -->
+    <section class="downloads" id="downloads">
+      <a class="dl dl-windows" id="dlWindows"
+         href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest/download/AeroDoc-Setup-latest.exe">
+        <span class="dl-os">Download for Windows</span>
+        <span class="dl-meta mono">Installer · <span data-fill="version">—</span> · <span data-fill="winSize">—</span></span>
+      </a>
+      <a class="dl dl-android" id="dlAndroid"
+         href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest/download/AeroDoc-latest.apk">
+        <span class="dl-os">Download for Android</span>
+        <span class="dl-meta mono">APK · <span data-fill="version">—</span> · <span data-fill="apkSize">—</span></span>
+      </a>
+    </section>
+
+    <!-- ── Unsigned-build caution (honest, load-bearing) ──── -->
+    <aside class="callout">
+      <p>These builds are not code-signed yet. On Windows, SmartScreen will warn
+        “unknown publisher” — click <strong>More info → Run anyway</strong>. The
+        Android APK is a side-load build; enable <strong>Install unknown apps</strong>
+        for your browser. Verify the <span class="mono">sha256</span> listed on the
+        <a href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest">release page</a>.</p>
+    </aside>
+
+    <!-- ── Value ──────────────────────────────────────────── -->
+    <section class="cards">
+      <article class="card">
+        <span class="dot" style="--dot:#56B7C7"></span>
+        <h3>Fully offline</h3>
+        <p>The documentation package lives on the device. No server, no connection
+          needed at read time — built for the hangar floor.</p>
+      </article>
+      <article class="card">
+        <span class="dot" style="--dot:#D9A33B"></span>
+        <h3>Built for the print</h3>
+        <p>AMM, AIPC, WDM and FIM with the task codes, figures, parts and wiring you
+          already know — navigated the way the manuals are organised.</p>
+      </article>
+      <article class="card">
+        <span class="dot" style="--dot:#A57FE0"></span>
+        <h3>Cross-reference aware</h3>
+        <p>Tasks, parts, wires and effectivity resolve to each other and read in
+          their reference colours, so a citation is one tap from its target.</p>
+      </article>
+    </section>
+
+    <!-- ── System requirements ────────────────────────────── -->
+    <section class="sysreq">
+      <h2 class="label">SYSTEM REQUIREMENTS</h2>
+      <div class="reqgrid mono">
+        <div><span class="req-os">Windows</span> 10 or later · 64-bit · ~50&nbsp;MB free + package</div>
+        <div><span class="req-os">Android</span> 7.0 or later · ~150&nbsp;MB free + package</div>
+      </div>
+    </section>
+
+    <!-- ── Version strip ──────────────────────────────────── -->
+    <section class="verstrip">
+      <span class="mono">Latest: <span data-fill="version">—</span> · <span data-fill="date">—</span></span>
+      <a class="mono" href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest">Release notes &amp; checksums →</a>
+    </section>
+
+    <!-- ── Footer ─────────────────────────────────────────── -->
+    <footer class="foot">
+      <span class="eyebrow">AERODOC</span>
+      <p>Air Algérie B737-89 maintenance reference.</p>
+      <p class="muted mono">© 2026 · <a href="https://github.com/engineerlogger-spec/aerodoc-downloads" rel="noopener">engineerlogger-spec/aerodoc-downloads</a></p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

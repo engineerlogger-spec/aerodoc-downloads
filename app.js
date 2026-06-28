@@ -36,11 +36,9 @@
       if (d.date) fill('date', d.date);
       if (d.windows) {
         fill('winSize', mb(d.windows.size));
-        if (d.windows.url) document.getElementById('dlWindows').href = d.windows.url;
       }
       if (d.android) {
         fill('apkSize', mb(d.android.size));
-        if (d.android.url) document.getElementById('dlAndroid').href = d.android.url;
       }
     })
     .catch(function () { /* keep the static fallback links + em dashes */ });

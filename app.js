@@ -42,4 +42,35 @@
       }
     })
     .catch(function () { /* keep the static fallback links + em dashes */ });
+
+  // ── Version history: every past version, downloadable on demand. ──
+  function dl(url, label) {
+    return url ? '<a class="vdl mono" href="' + url + '">' + label + '</a>' : '';
+  }
+  fetch('versions.json', { cache: 'no-cache' })
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (list) {
+      var el = document.getElementById('versionList');
+      if (!el || !list || !list.length) return;
+      var html = '';
+      for (var i = 0; i < list.length; i++) {
+        var v = list[i];
+        html += '<div class="vrow">'
+          + '<span class="vver mono">' + (v.version || '?') + '</span>'
+          + '<span class="vdate mono">' + (v.date || '') + '</span>'
+          + '<span class="vlinks">'
+          + dl(v.windows && v.windows.url, 'Windows ↓')
+          + dl(v.android && v.android.url, 'Android ↓')
+          + '</span></div>';
+      }
+      el.innerHTML = html;
+    })
+    .catch(function () {
+      var el = document.getElementById('versionList');
+      if (el) {
+        el.innerHTML = '<p class="muted mono">'
+          + '<a href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases">'
+          + 'All releases on GitHub →</a></p>';
+      }
+    });
 })();

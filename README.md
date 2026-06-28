@@ -2,7 +2,6 @@
 
 Public download channel for **AeroDoc**, an offline reader for **Boeing
 maintenance documentation** (AMM / AIPC / WDM / FIM) on Windows and Android.
-First fleet: the Air Algérie B737-89 — more aircraft to follow.
 
 ### Get the app
 **→ https://engineerlogger-spec.github.io/aerodoc-downloads/**

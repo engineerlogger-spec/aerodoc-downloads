@@ -1,15 +1,16 @@
 # AeroDoc — downloads
 
-Public download channel for **AeroDoc**, the offline Boeing 737 maintenance
-reference (AMM / AIPC / WDM / FIM) for the Air Algérie B737-89 fleet.
+Public download channel for **AeroDoc**, an offline reader for **Boeing
+maintenance documentation** (AMM / AIPC / WDM / FIM) on Windows and Android.
+First fleet: the Air Algérie B737-89 — more aircraft to follow.
 
 ### Get the app
 **→ https://engineerlogger-spec.github.io/aerodoc-downloads/**
 
 | Platform | Latest |
 | --- | --- |
-| Windows | [Installer](https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest/download/AeroDoc-Setup-latest.exe) |
-| Android | [APK](https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest/download/AeroDoc-latest.apk) |
+| Windows | [Installer](https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest/download/aerodoc_installer_latest.exe) |
+| Android | [APK](https://github.com/engineerlogger-spec/aerodoc-downloads/releases/latest/download/aerodoc_latest.apk) |
 
 All versions + SHA-256 checksums: **[Releases](https://github.com/engineerlogger-spec/aerodoc-downloads/releases)**.
 
@@ -21,5 +22,6 @@ All versions + SHA-256 checksums: **[Releases](https://github.com/engineerlogger
 
 This repo holds **only** the landing page (`index.html` / `styles.css` /
 `app.js`) and the release binaries. The page resolves the latest build from
-`latest.json`, refreshed on each release by `tools/publish_release.ps1` in the
-(private) AeroDoc source repo. The app source is not here.
+`latest.json` and the full history from `versions.json`, both refreshed on each
+release by `python tools/aerodoc.py release-app` in the (private) AeroDoc source
+repo. The app source is not here.

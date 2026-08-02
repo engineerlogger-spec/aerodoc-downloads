@@ -4,12 +4,12 @@
   "tag": "v1.1.9",
   "windows": {
     "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/v1.1.9/aerodoc_installer_1.1.9.exe",
-    "size": 19526336,
-    "sha256": "0d75e24988be4455c1b5203dfb55f887a08e3260bfde2496630be62ffd6cac50"
+    "size": 19526192,
+    "sha256": "9f2110866012aa0b1f0d83f20f166ad34fcf28044f7c5c50fee4956dc731673c"
   },
   "android": {
     "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/v1.1.9/aerodoc_1.1.9.apk",
-    "size": 81516012,
-    "sha256": "7df1afe8d07772b92b64ca53452b5c8567d46099ce6f9a9e68f8ea09ac2afd37"
+    "size": 81532396,
+    "sha256": "33bad0fe3eb51e03d29a4c974610da2ff50c407797e8f382ed4fe51e31be2eb9"
   }
 }

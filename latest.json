@@ -1,18 +1,18 @@
 {
   "version": "1.2.1",
-  "build": 49,
+  "build": 50,
   "minSupportedBuild": 0,
   "channel": "stable",
   "date": "2026-08-08",
   "tag": "v1.2.1",
   "windows": {
     "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/v1.2.1/aerodoc_installer_1.2.1.exe",
-    "size": 19539086,
-    "sha256": "44894155c31cc5fed82e0f99607381d029cd01e0010c758d279b6d3e8f10163a"
+    "size": 19539841,
+    "sha256": "088332ac3b35e852f6caf62930b85bb68f3fef3509e53714aeb4641f38defc8a"
   },
   "android": {
     "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/v1.2.1/aerodoc_1.2.1.apk",
     "size": 76317198,
-    "sha256": "7e43e1fdf8a579ea927023068bc7eb06f9f1aacb047b66ac0c5ba644463e03fa"
+    "sha256": "14a220afff40e030b1e648ccab6114bd5cd5fd8c240f647148c8f439cf242cdc"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "channel": "admin",
+  "published": false,
+  "version": null,
+  "build": 0,
+  "date": null,
+  "note": "Set published to true and fill version, build, date and the windows/android blocks when the first admin build is released. Shape matches ../latest.json: each platform block carries url, size and sha256. Kept separate from the user catalog on purpose — an admin release must never be offered to users as an app update."
+}

@@ -1,19 +1,19 @@
 {
-  "version": "1.0.4",
-  "build": 5,
+  "version": "1.0.5",
+  "build": 6,
   "minSupportedBuild": 0,
   "channel": "admin",
-  "date": "2026-08-22",
-  "tag": "admin-v1.0.4",
+  "date": "2026-08-23",
+  "tag": "admin-v1.0.5",
   "windows": {
-    "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-v1.0.4/aerodoc_admin_installer_1.0.4.exe",
-    "size": 10546066,
-    "sha256": "7f99adb0d8827eefdc81247f689ebb4b15c6554032bb9cb9889c57e6085ce85e"
+    "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-v1.0.5/aerodoc_admin_installer_1.0.5.exe",
+    "size": 10563892,
+    "sha256": "815eccfc11a5c660f9784f6cf7a51a5c5f74eee3e88e23f9beb1c49691521efe"
   },
   "android": {
-    "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-v1.0.4/aerodoc_admin_1.0.4.apk",
-    "size": 50921416,
-    "sha256": "7085f00daf2e54c7152931aa1cfbca2f2487bdee06066d377c4e4e2b0c6ec671"
+    "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-v1.0.5/aerodoc_admin_1.0.5.apk",
+    "size": 51052492,
+    "sha256": "143d3e5b922c51d91411cc6072692dc1d33727cb952b96ac820f5928c46b94ae"
   },
   "published": true
 }

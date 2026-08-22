@@ -7,12 +7,12 @@
   "tag": "admin-v1.3.0",
   "windows": {
     "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-v1.3.0/aerodoc_admin_1.3.0_windows.zip",
-    "size": 19233665,
-    "sha256": "36402305b2aa4cdf4b36f8053f1dd04f09c4d78ead72ae75355462aef04e5c3e"
+    "size": 20738055,
+    "sha256": "da45af87a2ee4c50dbdf6ede66511e64af297b919966d1ce1b5348cb9b795b51"
   },
   "android": {
     "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-v1.3.0/aerodoc_admin_1.3.0.apk",
-    "size": 71419314,
-    "sha256": "0f35807fa6f8adf17c66c132796e90ca5182e2647e72957ae949caa630d9a6d0"
+    "size": 82365818,
+    "sha256": "9e05089db1663efcc8f5d90c7559ea4ca5044e34d0cb6729003488886c6af07b"
   }
 }

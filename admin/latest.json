@@ -1,8 +1,18 @@
 {
   "channel": "admin",
-  "published": false,
-  "version": null,
-  "build": 0,
-  "date": null,
-  "note": "Set published to true and fill version, build, date and the windows/android blocks when the first admin build is released. Shape matches ../latest.json: each platform block carries url, size and sha256. Kept separate from the user catalog on purpose — an admin release must never be offered to users as an app update."
+  "published": true,
+  "version": "1.3.0",
+  "build": 74,
+  "date": "2026-08-22",
+  "tag": "admin-v1.3.0",
+  "windows": {
+    "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-v1.3.0/aerodoc_admin_1.3.0_windows.zip",
+    "size": 19233665,
+    "sha256": "36402305b2aa4cdf4b36f8053f1dd04f09c4d78ead72ae75355462aef04e5c3e"
+  },
+  "android": {
+    "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-v1.3.0/aerodoc_admin_1.3.0.apk",
+    "size": 71419314,
+    "sha256": "0f35807fa6f8adf17c66c132796e90ca5182e2647e72957ae949caa630d9a6d0"
+  }
 }

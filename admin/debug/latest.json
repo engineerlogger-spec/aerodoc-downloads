@@ -1,9 +1,19 @@
 {
-  "version": "0.0.0",
-  "build": 0,
+  "version": "1.0.6",
+  "build": 8,
   "minSupportedBuild": 0,
   "channel": "admin-debug",
-  "date": "",
-  "tag": "",
-  "published": false
+  "date": "2026-08-24",
+  "tag": "admin-debug-v1.0.6",
+  "windows": {
+    "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-debug-v1.0.6/aerodoc_admin_debug_installer_1.0.6.exe",
+    "size": 10564830,
+    "sha256": "2f3eeea66de8f2a565ba5b6673636cdbadbd8b75c343db25724aa59695e819d3"
+  },
+  "android": {
+    "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/admin-debug-v1.0.6/aerodoc_admin_debug_1.0.6.apk",
+    "size": 51052488,
+    "sha256": "035077c9826f5e669d5a03c26833975340106c8d0fc15ada39d1a0b3c3f9b4f4"
+  },
+  "published": true
 }

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-os="unknown">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AeroDoc (debug) — test builds</title>
+  <meta name="description" content="Test builds of AeroDoc. Not for use on the line — install the release build instead." />
+  <meta property="og:title" content="AeroDoc (debug)" />
+  <meta property="og:description" content="Test builds of AeroDoc. Not for use on the line — install the release build instead." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* The user channel has always had something to download, so the shared
+       stylesheet never needed a dead-button state. The admin channel starts
+       with nothing published. */
+    .dl.disabled {
+      opacity: 0.45;
+      pointer-events: none;
+      cursor: default;
+    }
+  </style>
+  <meta name="robots" content="noindex" />
+</head>
+<body>
+  <div class="wrap">
+    <!-- ── Header ─────────────────────────────────────────── -->
+    <header class="topbar">
+      <div class="wordmark">
+        <span class="eyebrow">AERODOC ADMIN</span>
+      </div>
+      <nav class="topnav">
+        <a id="navVersion" class="mono" href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases">v—</a>
+        <a class="mono" href="../">AeroDoc</a>
+      </nav>
+    </header>
+
+    <!-- ── Hero ───────────────────────────────────────────── -->
+    <section class="hero">
+      <h1>The access registry,<br />in your hands.</h1>
+      <p class="sub">A separate build of AeroDoc that manages who may run it:
+        approve and revoke accounts, grant access for a period you set, free a
+        device slot, and switch device binding off for one person or everyone.</p>
+    </section>
+
+    <!-- ── Download row ───────────────────────────────────── -->
+    <section class="downloads" id="downloads">
+      <a class="dl dl-windows" id="dlWindows"
+         href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases">
+        <span class="dl-os">Download Admin for Windows</span>
+        <span class="dl-meta mono">Installer · <span data-fill="version">—</span> · <span data-fill="winSize">—</span></span>
+      </a>
+      <a class="dl dl-android" id="dlAndroid"
+         href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases">
+        <span class="dl-os">Download Admin for Android</span>
+        <span class="dl-meta mono">APK · <span data-fill="version">—</span> · <span data-fill="apkSize">—</span></span>
+      </a>
+    </section>
+
+    <!-- ── What this page is, and is not ──────────────────── -->
+    <aside class="callout">
+      <p><strong>This page is open on purpose.</strong> The admin build is only
+        a screen. Authority lives in the Firestore security rules, not in the
+        binary: anyone who downloads it can sign in and will be refused every
+        read and every write unless their account is an administrator. There is
+        nothing here worth hiding, and hiding it would protect nothing.</p>
+    </aside>
+
+    <!-- ── What it controls ───────────────────────────────── -->
+    <section class="cards">
+      <article class="card">
+        <span class="dot" style="--dot:#5FB57A"></span>
+        <h3>Approve &amp; revoke</h3>
+        <p>New accounts arrive pending and stay locked out until you approve
+          them. Revoking says so plainly on the user's screen — it never
+          reverts to “waiting for approval”.</p>
+      </article>
+      <article class="card">
+        <span class="dot" style="--dot:#E0A028"></span>
+        <h3>Access for a period</h3>
+        <p>Grant access until a date you choose, then extend it or clear it.
+          The end date travels to the device, so going offline cannot outrun
+          it.</p>
+      </article>
+      <article class="card">
+        <span class="dot" style="--dot:#4A8EC0"></span>
+        <h3>Device slots</h3>
+        <p>One Windows and one Android device per account, each free to move
+          once every 30 days. Unbind a slot to override that instantly when a
+          phone breaks or a laptop is reimaged.</p>
+      </article>
+    </section>
+
+    <!-- ── System requirements ────────────────────────────── -->
+    <section class="sysreq">
+      <h2 class="label">REQUIREMENTS</h2>
+      <div class="reqgrid mono">
+        <div><span class="req-os">Windows</span> 10 or later · 64-bit</div>
+        <div><span class="req-os">Android</span> 7.0 or later</div>
+        <div><span class="req-os">Account</span> an administrator account · a connection at all times</div>
+      </div>
+    </section>
+
+    <!-- ── Version strip ──────────────────────────────────── -->
+    <section class="verstrip">
+      <span class="mono">Latest: <span data-fill="version">—</span> · <span data-fill="date">—</span></span>
+      <a class="mono" href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases">Release notes &amp; checksums →</a>
+    </section>
+
+    <!-- ── Footer ─────────────────────────────────────────── -->
+    <footer class="foot">
+      <span class="eyebrow">AERODOC ADMIN</span>
+      <p>The access registry for AeroDoc.</p>
+      <p class="muted mono">© 2026 · <a href="https://github.com/engineerlogger-spec/aerodoc-downloads" rel="noopener">engineerlogger-spec/aerodoc-downloads</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // The admin channel has its own catalog, so publishing an admin build
+    // never touches the user channel's latest.json — and an admin release
+    // cannot offer itself to users as an app update.
+    //
+    // Until the first one is published this page says so, rather than
+    // handing out links to release assets that do not exist.
+    (async () => {
+      const fill = (key, value) => {
+        document.querySelectorAll(`[data-fill="${key}"]`)
+          .forEach((el) => { el.textContent = value; });
+      };
+      const mb = (bytes) => `${(bytes / 1048576).toFixed(1)} MB`;
+
+      const unpublished = (note) => {
+        document.querySelectorAll('.dl').forEach((el) => {
+          el.classList.add('disabled');
+          el.setAttribute('aria-disabled', 'true');
+          el.removeAttribute('href');
+        });
+        const section = document.getElementById('downloads');
+        const p = document.createElement('p');
+        p.className = 'muted mono';
+        p.textContent = note;
+        section.after(p);
+      };
+
+      try {
+        const res = await fetch('latest.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(res.status);
+        const data = await res.json();
+
+        if (!data.published) {
+          unpublished('No admin build published yet.');
+          return;
+        }
+
+        fill('version', `${data.version} (${data.build})`);
+        fill('date', data.date ?? '—');
+        document.getElementById('navVersion').textContent = `v${data.version}`;
+
+        if (data.windows) {
+          document.getElementById('dlWindows').href = data.windows.url;
+          fill('winSize', mb(data.windows.size));
+        }
+        if (data.android) {
+          document.getElementById('dlAndroid').href = data.android.url;
+          fill('apkSize', mb(data.android.size));
+        }
+      } catch (error) {
+        unpublished('Could not read the admin catalog.');
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -13,23 +13,34 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
   <style>
-    /* The user channel has always had something to download, so the shared
-       stylesheet never needed a dead-button state. The admin channel starts
-       with nothing published. */
-    .dl.disabled {
-      opacity: 0.45;
-      pointer-events: none;
-      cursor: default;
+    /* The debug channel has to be unmistakable at a glance — the whole risk
+       is somebody installing one of these thinking it is the real app. */
+    .debugbar {
+      display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline;
+      margin: 0 0 22px; padding: 10px 14px;
+      border: 1px solid #b4732a; border-left-width: 4px; border-radius: 4px;
+      background: rgba(180, 115, 42, 0.10);
+      font-size: 13px; line-height: 1.5;
     }
+    .debugbar strong { letter-spacing: 1.2px; color: #d08b34; }
+    .dl.disabled { opacity: 0.45; pointer-events: none; cursor: default; }
   </style>
   <meta name="robots" content="noindex" />
 </head>
 <body>
   <div class="wrap">
+    <!-- ── Debug channel banner ───────────────────────────── -->
+    <div class="debugbar">
+      <strong>DEBUG CHANNEL</strong>
+      <span>Test builds. Not for use on the line — they replace the release
+        app and can be broken. The release build is at
+        <a href="../">AeroDoc</a>.</span>
+    </div>
+
     <!-- ── Header ─────────────────────────────────────────── -->
     <header class="topbar">
       <div class="wordmark">
-        <span class="eyebrow">AERODOC ADMIN</span>
+        <span class="eyebrow">AERODOC — DEBUG</span>
       </div>
       <nav class="topnav">
         <a id="navVersion" class="mono" href="https://github.com/engineerlogger-spec/aerodoc-downloads/releases">v—</a>
@@ -39,10 +50,8 @@
 
     <!-- ── Hero ───────────────────────────────────────────── -->
     <section class="hero">
-      <h1>The access registry,<br />in your hands.</h1>
-      <p class="sub">A separate build of AeroDoc that manages who may run it:
-        approve and revoke accounts, grant access for a period you set, free a
-        device slot, and switch device binding off for one person or everyone.</p>
+      <h1>AeroDoc, before it is anybody&rsquo;s update.</h1>
+      <p class="sub">Test builds of the reader. They install over the release app and are published here to be tried on a real device — not to be relied on.</p>
     </section>
 
     <!-- ── Download row ───────────────────────────────────── -->
@@ -111,8 +120,8 @@
 
     <!-- ── Footer ─────────────────────────────────────────── -->
     <footer class="foot">
-      <span class="eyebrow">AERODOC ADMIN</span>
-      <p>The access registry for AeroDoc.</p>
+      <span class="eyebrow">AERODOC — DEBUG</span>
+      <p>Test builds of the reader. They install over the release app and are published here to be tried on a real device — not to be relied on.</p>
       <p class="muted mono">© 2026 · <a href="https://github.com/engineerlogger-spec/aerodoc-downloads" rel="noopener">engineerlogger-spec/aerodoc-downloads</a></p>
     </footer>
   </div>

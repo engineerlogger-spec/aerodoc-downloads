@@ -34,11 +34,26 @@
         }
       }
       if (d.date) fill('date', d.date);
+      // Point the buttons at the EXACT release this catalog describes.
+      //
+      // The static hrefs use /releases/latest/, and GitHub's "latest" is the
+      // most recently created release in the whole repo — which became the
+      // ADMIN app once it started publishing here. The client buttons then
+      // resolved against a release that has no client assets on it at all.
+      //
+      // latest.json is rewritten by every client publish and carries the
+      // full URL, so it is the one source that cannot drift.
+      function point(id, url) {
+        var a = document.getElementById(id);
+        if (a && url) a.href = url;
+      }
       if (d.windows) {
         fill('winSize', mb(d.windows.size));
+        point('dlWindows', d.windows.url);
       }
       if (d.android) {
         fill('apkSize', mb(d.android.size));
+        point('dlAndroid', d.android.url);
       }
     })
     .catch(function () { /* keep the static fallback links + em dashes */ });

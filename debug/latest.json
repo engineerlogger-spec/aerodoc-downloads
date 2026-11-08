@@ -1,19 +1,19 @@
 {
   "version": "1.3.0",
-  "build": 89,
+  "build": 90,
   "minSupportedBuild": 0,
   "channel": "debug",
   "date": "2026-11-08",
   "tag": "debug-v1.3.0",
   "windows": {
     "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/debug-v1.3.0/aerodoc_debug_installer_1.3.0.exe",
-    "size": 15977277,
-    "sha256": "7b04ea87585b194a864613734de8cec2b278ed87c9142d11a46b73b5b3fe3981"
+    "size": 15979299,
+    "sha256": "4ea12c4aa77b1c6415df29ce2c8e550494e289f4f5c30bb40b7f3fd7c4f13134"
   },
   "android": {
     "url": "https://github.com/engineerlogger-spec/aerodoc-downloads/releases/download/debug-v1.3.0/aerodoc_debug_1.3.0.apk",
     "size": 76528140,
-    "sha256": "3d147c944ff23d950a9150c3f4c97bb7b6cc63032611c948b7c89824213a9394"
+    "sha256": "5f2aa99d36edbb5aa9ed27e0c157bf9f8e4b8b626a032577b5a3afef7409db8d"
   },
   "published": true
 }
